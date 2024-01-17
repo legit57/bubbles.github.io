@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="rsc/logo@bubbles.jpg" alt="Bubbles Cleaning Company Logo">
+            </div>
+            <h1>Bubbles Cleaning Company</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <p>For inquiries, bookings, or any other information, please fill out the form below or contact us using the provided details:</p>
+        </section>
+
+        <section name="form">
+            <h3>Contact Form</h3>
+            <form action="submit.php" method="POST">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+                <br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+                <br>
+                <label for="cleaningtype">Cleaning Type:</label>
+                <input type="text" id="cleaningtype" name="cleaningtype" required>
+                <br>
+                <label for="duedate">Due Date:</label>
+                <input type="date" id="duedate" name="duedate" required>
+                <br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <br>
+                <label for="phonenumber">Phone Number:</label>
+                <input type="tel" id="phonenumber" name="phonenumber" required>
+                <br>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section>
+            <h3>Service Area</h3>
+            <div id="map">
+                <style>
+                    #map{
+                        height: 500px;
+                        width: 500px;
+                    }
+                </style>
+                <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+                <script>
+                    // Create the map
+                    var map = L.map('map').setView([-25.757589380191142, 28.15529065332915], 16);
+                 
+                    // Add the Google Satellite layer
+                    L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+                        maxZoom: 20,
+                        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+                    }).addTo(map);
+                 
+                    // Set maximum zoom level
+                    var maxZoom = 20; 
+                 
+                    // Set map boundaries
+                    map.on('drag', function() {
+                        map.panInsideBounds(bounds, { animate: false });
+                    });
+                 
+                    // Create a custom icon
+                    var customIcon = L.icon({
+                        iconUrl: "resources/images/here.png", // Replace with the path to your custom marker image
+                        iconSize: [30, 30], // Replace with the desired size of the marker image
+                        iconAnchor: [15, 30] // Replace with the anchor point of the marker image (half of the iconSize)
+                    });
+                 </script>
+            </div>
+            
+        </section>
+
+        <section>
+            <h3>Follow Us</h3>
+            <div class="social-media">
+                <a href="https://www.facebook.com/bubblescleaningcompany" target="_blank"><img src="rsc/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/bubblescleaningcompany" target="_blank"><img src="rsc/instagram.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com/bubblescleaning" target="_blank"><img src="rsc/twitter.png" alt="Twitter"></a>
+            </div>
+        </section>
+    </main>
+     
+    <footer>
+        <p>Made By Anesu Butete</p>
+    </footer>
+
+</body>
+</html>

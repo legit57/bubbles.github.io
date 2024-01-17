@@ -1,0 +1,118 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://img.freepik.com/free-photo/colorful-composition-with-mop-sponges-rags-gloves-detergents-general-cleaning-cleaning-service-concept-background_169016-10763.jpg?w=740&t=st=1705088349~exp=1705088949~hmac=3389bbfb480b66362165ff309011e3ceb5c63a09ddeea4094e8408245e3c1fad");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(20, 134, 228);
+    color: white;
+    padding: 5px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 75px;
+    margin-right: 75px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: rgb(6, 43, 207);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: rgb(20, 134, 228);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff6f4a;
+}
+
+.learn-more-button {
+    display: inline-block;
+    background-color: rgb(20, 134, 228);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #00b8a9;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(20, 134, 228);
+    color: white;
+    padding: 20px;
+}
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+map {
+    height: 590px;
+}
+.service-image{
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+}
+.cleaningtypt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lol{
+    border-color: black;
+}
+.form{
+    display: flex;
+    align-items: center;
+}
